@@ -1,5 +1,5 @@
 ---
-title: "Installing Adrenaline"
+title: "Adrenaline"
 ---
 
 {% include toc title="Table of Contents" %}
@@ -18,7 +18,7 @@ You must have already installed VitaShell to use this.
 * An FTP Client such as [WinSCP](https://winscp.net/) or [CyberDuck](https://cyberduck.io/)
   + Alternatively, you can also use the USB transfer feature of VitaShell
 * The latest release of [Adrenaline](https://github.com/TheOfficialFloW/Adrenaline/releases/latest)
-* The latest release of [PSP Homebrew Browser]({{ "/assets/files/PSPhbb_dev.vpk" | absolute_url }}){:download="config.txt"}
+* The latest release of [PSP Homebrew Browser]({{ "/assets/files/PSPhbb_dev.vpk" | absolute_url }})
 
 ### Instructions
 
@@ -65,7 +65,9 @@ You must have already installed VitaShell to use this.
 1. Launch the Adrenaline application
 1. Press (Cross) to download the PSP 6.61 firmware
   + This process will take some time
-  + If you cancel the download before it completes, you will need to reboot before you can restart the download
+  + If the download fails, the downloader will get confused and begin to give you the error `Cannot find ux0:/app/PSPEMUCFW/661.PBP`
+  + If you encounter the above error, use VitaShell to delete the `ux0:app/PSPEMUCFW/flash0/` folder, then try again
+  + If you still encounter this error, manually download [EBOOT.PBP](http://de01.psp.update.playstation.org/update/psp/image/eu/2014_1212_6be8878f475ac5b1a499b95ab2f7d301/EBOOT.PBP), rename it to `661.PBP`, then transfer it to `ux0:app/PSPEMUCFW/` using VitaShell
   + The Adrenaline application will close automatically when the download is complete
 1. Re-launch the Adrenaline application
 1. Press (Cross) to install PSP 6.61 the firmware
